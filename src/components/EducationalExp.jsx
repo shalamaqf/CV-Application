@@ -29,11 +29,29 @@ export default function EducationalExp() {
     }
 
     return (
-        <>
-            <Input label='School/University' value={school} onChange={handleSchoolChange} type='text'></Input>
-            <Input label='Title of Study' value={titleStudy} onChange={handleTitleStudyChange} type='text'></Input>
-            <Input label='Date of Study' value={dateStudy} onChange={handleDateStudyChange} type='date'></Input>
-        </>
+        <section>
+            <div>
+                {
+                    isEditing?
+                        <EditView 
+                            handleToggle={handleToggle}
+                            school={school}
+                            titleStudy={titleStudy}
+                            dateStudy={dateStudy}
+                            handleSchoolChange={handleSchoolChange}
+                            handleTitleStudyChange={handleTitleStudyChange}
+                            handleDateStudyChange={handleDateStudyChange}
+                        />
+                    :
+                        <DisplayView
+                            handleToggle={handleToggle}
+                            school={school}
+                            titleStudy={titleStudy}
+                            dateStudy={dateStudy}
+                        />
+                }
+            </div>
+        </section>
     )
 }
 
