@@ -48,10 +48,10 @@ export default function GeneralInformation({name, handleNameChange}) {
 function EditView({handleToggle, name, email, phoneNumber, handleNameChange, handleEmailChange, handlePhoneNumberChange}) {
     return (
         <>
-            <div>
+            <div className="button-container">
                 <Button onClick={handleToggle}>Submit</Button>
             </div>
-            <div>
+            <div className="input-field-container">
                 <Input label="Name" value={name} onChange={handleNameChange} type='text' />
                 <Input label="Email" value={email} onChange={handleEmailChange} type='email' />
                 <Input label="Phone Number" value={phoneNumber} onChange={handlePhoneNumberChange} type='tel' />
