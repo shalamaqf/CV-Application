@@ -1,7 +1,5 @@
-export default function Button({textContext, handleToggle}) {
+export default function Button({onClick, children}) {
     return (
-        <div>
-            <button onClick={handleToggle}>{textContext}</button>
-        </div>
+            <button onClick={onClick}>{children}</button>
     )
 }
