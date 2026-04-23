@@ -34,12 +34,32 @@ export default function PracticalExp() {
     }
 
     return (
-        <>
-            <Input label="Company's Name" value={company} onChange={handleCompanyChange} type='text'></Input>
-            <Input label="Position Title" value={positionTitle} onChange={handlePositionTitleChange} type='text'></Input>
-            <Input label="Start Date" value={startDate} onChange={handleStartDateChange} type='date'></Input>
-            <Input label="End Date" value={endDate} onChange={handleEndDateChange} type='date'></Input>
-        </>
+        <section>
+            <div>
+                {
+                    isEditing?
+                    <EditView 
+                        handleToggle={handleToggle}
+                        company={company}
+                        positionTitle={positionTitle}
+                        startDate={startDate}
+                        endDate={endDate}
+                        handleCompanyChange={handleCompanyChange}
+                        handlePositionTitleChange={handlePositionTitleChange}
+                        handleStartDateChange={handleStartDateChange}
+                        handleEndDateChange={handleEndDateChange}
+                    />
+                    :
+                    <DisplayView 
+                        handleToggle={handleToggle}
+                        company={company}
+                        positionTitle={positionTitle}
+                        startDate={startDate}
+                        endDate={endDate}
+                    />
+                }
+            </div>
+        </section>
     )
 }
 
