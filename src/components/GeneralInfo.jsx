@@ -27,18 +27,22 @@ export default function GeneralInformation({name, handleNameChange}) {
         <section>
             <div>
                 {isEditing? 
-                    <>
-                        <div>
-                            <Button onClick={handleToggle}>Submit</Button>
-                        </div>
-                        <div>
-                            <Input label="Name" value={name} onChange={handleNameChange} type='text' />
-                            <Input label="Email" value={email} onChange={handleEmailChange} type='email' />
-                            <Input label="Phone Number" value={phoneNumber} onChange={handlePhoneNumberChange} type='tel' />
-                        </div>
-                    </> :
-                    <>
-                    </>
+                    <EditView 
+                        handleToggle={handleToggle}
+                        name={name}
+                        email={email}
+                        phoneNumber={phoneNumber}
+                        handleNameChange={handleNameChange}
+                        handleEmailChange={handleEmailChange}
+                        handlePhoneNumberChange={handlePhoneNumberChange}
+                    />
+                :
+                    <DisplayView 
+                        handleToggle={handleToggle}
+                        name={name}
+                        email={email}
+                        phoneNumber={phoneNumber}
+                    />
                 }
             </div>
         </section>
