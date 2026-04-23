@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "./Input";
+import Button from "./Button";
 
 export default function PracticalExp() {
     const [company, setCompany] = useState('');
@@ -38,6 +39,22 @@ export default function PracticalExp() {
             <Input label="Position Title" value={positionTitle} onChange={handlePositionTitleChange} type='text'></Input>
             <Input label="Start Date" value={startDate} onChange={handleStartDateChange} type='date'></Input>
             <Input label="End Date" value={endDate} onChange={handleEndDateChange} type='date'></Input>
+        </>
+    )
+}
+
+function EditView({handleToggle, company, positionTitle, startDate, endDate, handleCompanyChange, handlePositionTitleChange, handleStartDateChange, handleEndDateChange}) {
+    return (
+        <>
+            <div className="button-container">
+                <Button onClick={handleToggle}>Submit</Button>
+            </div>
+            <div className="input-field-container">
+                <Input label="Company's Name" value={company} onChange={handleCompanyChange} type='text'></Input>
+                <Input label="Position Title" value={positionTitle} onChange={handlePositionTitleChange} type='text'></Input>
+                <Input label="Start Date" value={startDate} onChange={handleStartDateChange} type='date'></Input>
+                <Input label="End Date" value={endDate} onChange={handleEndDateChange} type='date'></Input>
+            </div>
         </>
     )
 }
