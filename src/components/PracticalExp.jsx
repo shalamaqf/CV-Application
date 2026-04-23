@@ -6,6 +6,7 @@ export default function PracticalExp() {
     const [positionTitle, setPositionTitle] = useState('');
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
+    const [isEditing, setIsEditing] = useState(false);
 
     function handleCompanyChange(e) {
         setCompany(e.target.value);
@@ -21,6 +22,14 @@ export default function PracticalExp() {
 
     function handleEndDateChange(e) {
         setEndDate(e.target.value);
+    }
+
+    function handleToggle() {
+        if (isEditing) {
+            setIsEditing(false);
+        } else {
+            setIsEditing(true);
+        }
     }
 
     return (
