@@ -58,3 +58,18 @@ export default function GeneralInformation({name, handleNameChange}) {
         </section>
     )
 }
+
+function EditView({handleToggle, name, email, phoneNumber, handleNameChange, handleEmailChange, handlePhoneNumberChange}) {
+    return (
+        <>
+            <div>
+                <Button onClick={handleToggle}>Submit</Button>
+            </div>
+            <div>
+                <Input label="Name" value={name} onChange={handleNameChange} type='text' />
+                <Input label="Email" value={email} onChange={handleEmailChange} type='email' />
+                <Input label="Phone Number" value={phoneNumber} onChange={handlePhoneNumberChange} type='tel' />
+            </div>
+        </>
+    )
+}
