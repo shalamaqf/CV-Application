@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Input from "./Input";
+import Button from "./Button";
 
 export default function EducationalExp() {
     const [school, setSchool] = useState('');
     const [titleStudy, setTitleStudy] = useState('');
     const [dateStudy, setDateStudy] = useState('');
+    const [isEditing, setIsEditing] = useState(false);
 
     function handleSchoolChange(e) {
         setSchool(e.target.value);
@@ -16,6 +18,14 @@ export default function EducationalExp() {
 
     function handleDateStudyChange(e) {
         setDateStudy(e.target.value);
+    }
+
+    function handleToggle() {
+        if (isEditing) {
+            setIsEditing(false);
+        } else {
+            setIsEditing(true);
+        }
     }
 
     return (
