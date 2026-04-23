@@ -58,3 +58,27 @@ function EditView({handleToggle, company, positionTitle, startDate, endDate, han
         </>
     )
 }
+
+function DisplayView({handleToggle, company, positionTitle, startDate, endDate}) {
+    return (
+        <>
+            <div className="button-container">
+                <Button onClick={handleToggle}>Edit</Button>
+            </div>
+            <div className="text-field-container">
+                <div className="text-container">
+                    <p>Company's Name: {company}</p>
+                </div>
+                <div className="text-container">
+                    <p>Position Title: {positionTitle}</p>
+                </div>
+                <div className="text-container">
+                    <p>Start Date: {startDate}</p>
+                </div>
+                <div className="text-container">
+                    <p>End Date: {endDate}</p>
+                </div>
+            </div>
+        </>
+    )
+}
