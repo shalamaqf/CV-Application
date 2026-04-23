@@ -51,3 +51,24 @@ function EditView({handleToggle, school, titleStudy, dateStudy, handleSchoolChan
         </>
     )
 }
+
+function DisplayView({handleToggle, school, titleStudy, dateStudy}) {
+    return (
+        <>
+            <div className="button-container">
+                <Button onClick={handleToggle}>Edit</Button>
+            </div>
+            <div className="text-field-container">
+                <div className="text-container">
+                    <p>School/University: {school}</p>
+                </div>
+                <div className="text-container">
+                    <p>Title of Study: {titleStudy}</p>
+                </div>
+                <div className="text-container">
+                    <p>Date of Study: {dateStudy}</p>
+                </div>
+            </div>
+        </>
+    )
+}

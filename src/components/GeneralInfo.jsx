@@ -70,7 +70,7 @@ function DisplayView({handleToggle, name, email, phoneNumber}) {
             <div className="button-container">
                 <Button onClick={handleToggle}>Edit</Button>
             </div>
-            <div className="field-container">
+            <div className="text-field-container">
                 <div className="text-container">
                     <p>Name: {name}</p>
                 </div>
