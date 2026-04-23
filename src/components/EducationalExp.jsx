@@ -36,3 +36,18 @@ export default function EducationalExp() {
         </>
     )
 }
+
+function EditView({handleToggle, school, titleStudy, dateStudy, handleSchoolChange, handleTitleStudyChange, handleDateStudyChange}) {
+    return (
+        <>
+            <div className="button-container">
+                <Button onClick={handleToggle}>Submit</Button>
+            </div>
+            <div className="input-field-container">
+                <Input label='School/University' value={school} onChange={handleSchoolChange} type='text'></Input>
+                <Input label='Title of Study' value={titleStudy} onChange={handleTitleStudyChange} type='text'></Input>
+                <Input label='Date of Study' value={dateStudy} onChange={handleDateStudyChange} type='date'></Input>
+            </div>
+        </>
+    )
+}
