@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "./Input";
+import Button from "./Button";
 
 export default function GeneralInformation({name, handleNameChange}) {
     const [email, setEmail] = useState('');
@@ -23,10 +24,37 @@ export default function GeneralInformation({name, handleNameChange}) {
     }
 
     return (
-        <>
-            <Input label="Name" value={name} onChange={handleNameChange} type='text'></Input>
-            <Input label="Email" value={email} onChange={handleEmailChange} type='email'></Input>
-            <Input label="Phone Number" value={phoneNumber} onChange={handlePhoneNumberChange} type='tel'></Input>
-        </>
+        <section>
+            <div>
+                {isEditing? 
+                    <>
+                        <div>
+                            <Button onClick={handleToggle}>Submit</Button>
+                        </div>
+                        <div>
+                            <Input label="Name" value={name} onChange={handleNameChange} type='text' />
+                            <Input label="Email" value={email} onChange={handleEmailChange} type='email' />
+                            <Input label="Phone Number" value={phoneNumber} onChange={handlePhoneNumberChange} type='tel' />
+                        </div>
+                    </> :
+                    <>
+                        <div>
+                            <Button onClick={handleToggle}>Edit</Button>
+                        </div>
+                        <div>
+                            <div>
+                                <p>Name: {name}</p>
+                            </div>
+                            <div>
+                                <p>Email: {email}</p>
+                            </div>
+                            <div>
+                                <p>Phone Number: {phoneNumber}</p>
+                            </div>
+                        </div>
+                    </>
+                }
+            </div>
+        </section>
     )
 }
