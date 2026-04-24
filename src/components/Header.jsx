@@ -3,7 +3,7 @@ export default function Header({name}) {
         <>
             <header>
                 <h1>
-                    {name}'s CV Application
+                    {name}'s CV
                 </h1>
             </header>
         </>
