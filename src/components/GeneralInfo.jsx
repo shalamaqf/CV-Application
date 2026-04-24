@@ -25,7 +25,7 @@ export default function GeneralInformation({name, handleNameChange}) {
 
     return (
         <section>
-            <div>
+            <div className="field-container">
                 {isEditing? 
                     <EditView 
                         handleToggle={handleToggle}

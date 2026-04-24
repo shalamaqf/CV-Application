@@ -30,7 +30,7 @@ export default function EducationalExp() {
 
     return (
         <section>
-            <div>
+            <div className="field-container">
                 {
                     isEditing?
                         <EditView 

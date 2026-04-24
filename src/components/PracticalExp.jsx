@@ -35,7 +35,7 @@ export default function PracticalExp() {
 
     return (
         <section>
-            <div>
+            <div className="field-container">
                 {
                     isEditing?
                     <EditView 
