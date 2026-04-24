@@ -4,6 +4,7 @@
   }
 }
 
+/* Layout */
 body {
   margin: 0;
 }
@@ -98,3 +99,5 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+/* Style */
