@@ -52,13 +52,13 @@ export default function GeneralInformation({name, handleNameChange}) {
 function EditView({handleToggle, name, email, phoneNumber, handleNameChange, handleEmailChange, handlePhoneNumberChange}) {
     return (
         <>
-            <div className="button-container">
-                <Button onClick={handleToggle}>Submit</Button>
-            </div>
             <div className="input-field-container">
                 <Input label="Name" value={name} onChange={handleNameChange} type='text' />
                 <Input label="Email" value={email} onChange={handleEmailChange} type='email' />
                 <Input label="Phone Number" value={phoneNumber} onChange={handlePhoneNumberChange} type='tel' />
+            </div>
+            <div className="button-container">
+                <Button onClick={handleToggle}>Submit</Button>
             </div>
         </>
     )
@@ -67,9 +67,6 @@ function EditView({handleToggle, name, email, phoneNumber, handleNameChange, han
 function DisplayView({handleToggle, name, email, phoneNumber}) {
     return (
         <>
-            <div className="button-container">
-                <Button onClick={handleToggle}>Edit</Button>
-            </div>
             <div className="text-field-container">
                 <div className="text-container">
                     <p>Name: {name}</p>
@@ -80,6 +77,9 @@ function DisplayView({handleToggle, name, email, phoneNumber}) {
                 <div className="text-container">
                     <p>Phone Number: {phoneNumber}</p>
                 </div>
+            </div>
+            <div className="button-container">
+                <Button onClick={handleToggle}>Edit</Button>
             </div>
         </>
     )

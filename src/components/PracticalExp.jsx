@@ -66,14 +66,14 @@ export default function PracticalExp() {
 function EditView({handleToggle, company, positionTitle, startDate, endDate, handleCompanyChange, handlePositionTitleChange, handleStartDateChange, handleEndDateChange}) {
     return (
         <>
-            <div className="button-container">
-                <Button onClick={handleToggle}>Submit</Button>
-            </div>
             <div className="input-field-container">
                 <Input label="Company's Name" value={company} onChange={handleCompanyChange} type='text'></Input>
                 <Input label="Position Title" value={positionTitle} onChange={handlePositionTitleChange} type='text'></Input>
                 <Input label="Start Date" value={startDate} onChange={handleStartDateChange} type='date'></Input>
                 <Input label="End Date" value={endDate} onChange={handleEndDateChange} type='date'></Input>
+            </div>
+            <div className="button-container">
+                <Button onClick={handleToggle}>Submit</Button>
             </div>
         </>
     )
@@ -82,9 +82,6 @@ function EditView({handleToggle, company, positionTitle, startDate, endDate, han
 function DisplayView({handleToggle, company, positionTitle, startDate, endDate}) {
     return (
         <>
-            <div className="button-container">
-                <Button onClick={handleToggle}>Edit</Button>
-            </div>
             <div className="text-field-container">
                 <div className="text-container">
                     <p>Company's Name: {company}</p>
@@ -98,6 +95,9 @@ function DisplayView({handleToggle, company, positionTitle, startDate, endDate})
                 <div className="text-container">
                     <p>End Date: {endDate}</p>
                 </div>
+            </div>
+            <div className="button-container">
+                <Button onClick={handleToggle}>Edit</Button>
             </div>
         </>
     )
