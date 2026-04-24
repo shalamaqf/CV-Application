@@ -1,16 +1,12 @@
-# React + Vite
+## Title
+CV Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+A small CV Application project that provide users to input their information and generate a CV for them.
+This project implements some basic react concepts, such as component, props, state, and rendering techniques.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies
+- React: for structure and logic
+- CSS : for styling
+- Git: for version control
+- Netlify: for deploying the project
